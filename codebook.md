@@ -2,96 +2,96 @@ Codebook for tidyData.csv
 =========
 This codebook describes the output from running run_analysis.R on the /UCI HAR Dataset/ (see readme.md for more details on the source for this dataset).
 
-##Tidy Dataset
+#Tidy Dataset
 
-###Merging of Data
+##Merging of Data
 Please see the readme.md file for a description of how this dataset is assembled from the various files provided in the UCI HAR Dataset.
 
-###Subset of original data
+##Subset of original data
 This dataset represents a subset of the original dataset (see Original Dataset below).  The Tidy Dataset is intended to include only those values from the original dataset that represent mean or standard deviation.  The original codebook indicates that variables with *mean()* or *std()* represent a Mean value, or Standard deviation, respectively. Therefore, variables for selected for inclusion in the Tidy Dataset if the variable name included *mean()* or *std()*.  A total of 66 out of the original 561 variables, represent a mean or standard deviation.
 
 In addition to creating a subset of the original data, the Tidy Dataset represents the average of each selected variable for each subject and each activity.  
-###Rows
+##Rows
 The first two columns in the dataset represent row labels, identifying the subject and activity combination for each row:
 There are total of 30 subjects represented with values from 1 to 30, these are contained in the *subject_id* column.
 There are a total of 6 activity types, these are WALKING, WALKING_UPSTAIRS, WALKING_DOWNSTAIRS, SITTING, STANDING, and LAYING, and this is contained in the *activity* column.
 
 Thus for 30 subjects, for each of 6 activities, there are a total of 180 rows.
 
-###Columns
+##Columns
 Each of the columns (excluding columns that represent row labels, see above) provide the Average value for each of the selected variables from the original dataset, for a given subject and activity combination.
 The average is calculated using the R function, mean().  A description of the origin for the original dataset, including what each of the original variables represent, is provided in the (Original Dataset section below).
 The variables provided in tidyData.csv are as follows:
 
-Avg of tBodyAcc-mean()-X
-Avg of tBodyAcc-mean()-Y
-Avg of tBodyAcc-mean()-Z
-Avg of tBodyAcc-std()-X
-Avg of tBodyAcc-std()-Y
-Avg of tBodyAcc-std()-Z
-Avg of tGravityAcc-mean()-X
-Avg of tGravityAcc-mean()-Y
-Avg of tGravityAcc-mean()-Z
-Avg of tGravityAcc-std()-X
-Avg of tGravityAcc-std()-Y
-Avg of tGravityAcc-std()-Z
-Avg of tBodyAccJerk-mean()-X
-Avg of tBodyAccJerk-mean()-Y
-Avg of tBodyAccJerk-mean()-Z
-Avg of tBodyAccJerk-std()-X
-Avg of tBodyAccJerk-std()-Y
-Avg of tBodyAccJerk-std()-Z
-Avg of tBodyGyro-mean()-X
-Avg of tBodyGyro-mean()-Y
-Avg of tBodyGyro-mean()-Z
-Avg of tBodyGyro-std()-X
-Avg of tBodyGyro-std()-Y
-Avg of tBodyGyro-std()-Z
-Avg of tBodyGyroJerk-mean()-X
-Avg of tBodyGyroJerk-mean()-Y
-Avg of tBodyGyroJerk-mean()-Z
-Avg of tBodyGyroJerk-std()-X
-Avg of tBodyGyroJerk-std()-Y
-Avg of tBodyGyroJerk-std()-Z
-Avg of tBodyAccMag-mean()
-Avg of tBodyAccMag-std()
-Avg of tGravityAccMag-mean()
-Avg of tGravityAccMag-std()
-Avg of tBodyAccJerkMag-mean()
-Avg of tBodyAccJerkMag-std()
-Avg of tBodyGyroMag-mean()
-Avg of tBodyGyroMag-std()
-Avg of tBodyGyroJerkMag-mean()
-Avg of tBodyGyroJerkMag-std()
-Avg of fBodyAcc-mean()-X
-Avg of fBodyAcc-mean()-Y
-Avg of fBodyAcc-mean()-Z
-Avg of fBodyAcc-std()-X
-Avg of fBodyAcc-std()-Y
-Avg of fBodyAcc-std()-Z
-Avg of fBodyAccJerk-mean()-X
-Avg of fBodyAccJerk-mean()-Y
-Avg of fBodyAccJerk-mean()-Z
-Avg of fBodyAccJerk-std()-X
-Avg of fBodyAccJerk-std()-Y
-Avg of fBodyAccJerk-std()-Z
-Avg of fBodyGyro-mean()-X
-Avg of fBodyGyro-mean()-Y
-Avg of fBodyGyro-mean()-Z
-Avg of fBodyGyro-std()-X
-Avg of fBodyGyro-std()-Y
-Avg of fBodyGyro-std()-Z
-Avg of fBodyAccMag-mean()
-Avg of fBodyAccMag-std()
-Avg of fBodyBodyAccJerkMag-mean()
-Avg of fBodyBodyAccJerkMag-std()
-Avg of fBodyBodyGyroMag-mean()
-Avg of fBodyBodyGyroMag-std()
-Avg of fBodyBodyGyroJerkMag-mean()
+Avg of tBodyAcc-mean()-X,
+Avg of tBodyAcc-mean()-Y,
+Avg of tBodyAcc-mean()-Z,
+Avg of tBodyAcc-std()-X,
+Avg of tBodyAcc-std()-Y,
+Avg of tBodyAcc-std()-Z,
+Avg of tGravityAcc-mean()-X,
+Avg of tGravityAcc-mean()-Y,
+Avg of tGravityAcc-mean()-Z,
+Avg of tGravityAcc-std()-X,
+Avg of tGravityAcc-std()-Y,
+Avg of tGravityAcc-std()-Z,
+Avg of tBodyAccJerk-mean()-X,
+Avg of tBodyAccJerk-mean()-Y,
+Avg of tBodyAccJerk-mean()-Z,
+Avg of tBodyAccJerk-std()-X,
+Avg of tBodyAccJerk-std()-Y,
+Avg of tBodyAccJerk-std()-Z,
+Avg of tBodyGyro-mean()-X,
+Avg of tBodyGyro-mean()-Y,
+Avg of tBodyGyro-mean()-Z,
+Avg of tBodyGyro-std()-X,
+Avg of tBodyGyro-std()-Y,
+Avg of tBodyGyro-std()-Z,
+Avg of tBodyGyroJerk-mean()-X,
+Avg of tBodyGyroJerk-mean()-Y,
+Avg of tBodyGyroJerk-mean()-Z,
+Avg of tBodyGyroJerk-std()-X,
+Avg of tBodyGyroJerk-std()-Y,
+Avg of tBodyGyroJerk-std()-Z,
+Avg of tBodyAccMag-mean(),
+Avg of tBodyAccMag-std(),
+Avg of tGravityAccMag-mean(),
+Avg of tGravityAccMag-std(),
+Avg of tBodyAccJerkMag-mean(),
+Avg of tBodyAccJerkMag-std(),
+Avg of tBodyGyroMag-mean(),
+Avg of tBodyGyroMag-std(),
+Avg of tBodyGyroJerkMag-mean(),
+Avg of tBodyGyroJerkMag-std(),
+Avg of fBodyAcc-mean()-X,
+Avg of fBodyAcc-mean()-Y,
+Avg of fBodyAcc-mean()-Z,
+Avg of fBodyAcc-std()-X,
+Avg of fBodyAcc-std()-Y,
+Avg of fBodyAcc-std()-Z,
+Avg of fBodyAccJerk-mean()-X,
+Avg of fBodyAccJerk-mean()-Y,
+Avg of fBodyAccJerk-mean()-Z,
+Avg of fBodyAccJerk-std()-X,
+Avg of fBodyAccJerk-std()-Y,
+Avg of fBodyAccJerk-std()-Z,
+Avg of fBodyGyro-mean()-X,
+Avg of fBodyGyro-mean()-Y,
+Avg of fBodyGyro-mean()-Z,
+Avg of fBodyGyro-std()-X,
+Avg of fBodyGyro-std()-Y,
+Avg of fBodyGyro-std()-Z,
+Avg of fBodyAccMag-mean(),
+Avg of fBodyAccMag-std(),
+Avg of fBodyBodyAccJerkMag-mean(),
+Avg of fBodyBodyAccJerkMag-std(),
+Avg of fBodyBodyGyroMag-mean(),
+Avg of fBodyBodyGyroMag-std(),
+Avg of fBodyBodyGyroJerkMag-mean(),
 Avg of fBodyBodyGyroJerkMag-std()
 
 
-##Original Dataset
+#Original Dataset
 This section is taken almost entirely verbatim from the features_info.txt file contained in the 'UCI HAR Dataset'.  The entire dataset, including the features_info.txt file can be obtained from http://archive.ics.uci.edu/ml/datasets/Human+Activity+Recognition+Using+Smartphones#.  Please see the readme.md file for a description of how the tidyData.csv file is assembled from the originial dataset.
 
 The original dataset contains features selected from the accelerometer and gyroscope 3-axial raw signals tAcc-XYZ and tGyro-XYZ from a Samsung Galaxy S II smartphone worn on the waist. 
